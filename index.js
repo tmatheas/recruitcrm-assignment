@@ -56,6 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.has-submenu').forEach(toggle => {
         toggle.addEventListener('click', (e) => {
             e.preventDefault();
+            if (!layer2.classList.contains('expanded')) {
+                openLayer2();
+            }
             toggle.parentElement.classList.toggle('open');
         });
     });
