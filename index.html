@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body data-theme="dark">
+    <nav class="sidebar" id="sidebar">
+        <!-- Layer 1: Main Icon Navigation -->
+        <div class="sidebar-layer-1">
+            <ul class="sidebar-nav">
+                <i class="logo" data-lucide="codesandbox"></i>
+                <li class="nav-item">
+                    <a class="nav-link main-nav-link" data-panel="dashboard" title="Dashboard">
+                        <i class="navbar-link-icon" data-lucide="layout-dashboard"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link main-nav-link" data-panel="tasks" title="Tasks">
+                        <i class="navbar-link-icon" data-lucide="check-square"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav">
+                <li class="nav-item">
+                    <a id="theme-toggle" class="nav-link" title="Toggle Theme">
+                        <i data-lucide="sun"></i>
+                        <i data-lucide="moon" style="display:none;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" title="Settings">
+                        <i data-lucide="cog"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" title="User Account">
+                        <i data-lucide="user-circle"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Layer 2: Detailed Content Panels -->
+        <div class="sidebar-layer-2" id="sidebar-layer-2">
+            
+            <!-- Dashboard Panel -->
+            <div class="panel-content" id="dashboard-panel">
+                <div class="sidebar-header">
+                    <h2 class="panel-title">Dashboard</h2>
+                    <a class="nav-link collapse-btn" style="padding: 0.65rem;" title="Collapse">
+                        <i data-lucide="chevron-right"></i>
+                    </a>
+                </div>
+                <div class="search-box">
+                     <i data-lucide="search" class="search-icon"></i>
+                     <input type="text" placeholder="Search...">
+                </div>
+                <ul class="sidebar-nav">
+                    <span class="nav-sub-menu-header">Dashboard Types</span>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <i data-lucide="eye"></i>
+                            <div class="nav-title">
+                                <span class="nav-text">Overview</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link has-submenu">
+                            <i data-lucide="table-properties"></i>
+                            <div class="nav-title">
+                                <span class="nav-text">Executive summary</span>
+                                <i data-lucide="chevron-down" class="chevron"></i>
+                            </div>
+                        </a>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a class="nav-link">Revenue Overview</a></li>
+                            <li class="submenu-item"><a class="nav-link">Key Performance Indications</a></li>
+                            <li class="submenu-item"><a class="nav-link">Strategic Goals Progress</a></li>
+                            <li class="submenu-item"><a class="nav-link">Department Highlights</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link has-submenu">
+                            <i data-lucide="layout-dashboard"></i>
+                            <div class="nav-title">
+                                <span class="nav-text">Operations Dashboard</span>
+                                <i data-lucide="chevron-down" class="chevron"></i>
+                            </div>
+                        </a>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a class="nav-link">Project Timeline</a></li>
+                            <li class="submenu-item"><a class="nav-link">Resource Allocation</a></li>
+                            <li class="submenu-item"><a class="nav-link">Team Performance</a></li>
+                            <li class="submenu-item"><a class="nav-link">Capacity Planning</a></li>
+                        </ul>
+                    </li>
+                    <span class="nav-sub-menu-header">Report Summaries</span>
+                    <li class="nav-item">
+                        <a class="nav-link has-submenu">
+                            <i data-lucide="trending-up-down"></i>
+                            <div class="nav-title">
+                                <span class="nav-text">Financial Dashboard</span>
+                                <i data-lucide="chevron-down" class="chevron"></i>
+                            </div>
+                        </a>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a class="nav-link">Budget vs Actual</a></li>
+                            <li class="submenu-item"><a class="nav-link">Cash Flow Analysis</a></li>
+                            <li class="submenu-item"><a class="nav-link">Expense Breakdown</a></li>
+                            <li class="submenu-item"><a class="nav-link">Profit & Loss Summary</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link has-submenu">
+                            <i data-lucide="clipboard-minus"></i>
+                            <div class="nav-title">
+                                <span class="nav-text">Weekly Reports</span>
+                                <i data-lucide="chevron-down" class="chevron"></i>
+                            </div>
+                        </a>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a class="nav-link">Team Productivity: 87%</a></li>
+                            <li class="submenu-item"><a class="nav-link">Project Completion: 12/15</a></li>
+                            <li class="submenu-item"><a class="nav-link">Budget Utilization: 73%</a></li>
+                            <li class="submenu-item"><a class="nav-link">Client Satisfaction: 4.6/5 </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link has-submenu">
+                            <i data-lucide="star"></i>
+                            <div class="nav-title">
+                                <span class="nav-text">Monthly Insights</span>
+                                <i data-lucide="chevron-down" class="chevron"></i>
+                            </div>
+                        </a>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a class="nav-link">Revenue Growth: +15.3%</a></li>
+                            <li class="submenu-item"><a class="nav-link">New Clients: 24</a></li>
+                            <li class="submenu-item"><a class="nav-link">Team Expansion: 8 hires</a></li>
+                            <li class="submenu-item"><a class="nav-link">Cost Reduction: 7.2%</a></li>
+                        </ul>
+                    </li>
+                    <span class="nav-sub-menu-header">Business Intelligence</span>
+                    <li class="nav-item">
+                        <a class="nav-link has-submenu">
+                            <i data-lucide="eye"></i>
+                            <div class="nav-title">
+                                <span class="nav-text">Quarterly Analysis</span>
+                                <i data-lucide="chevron-down" class="chevron"></i>
+                            </div>
+                        </a>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a class="nav-link">Market Position: Improvement</a></li>
+                            <li class="submenu-item"><a class="nav-link">ROI: 23.4%</a></li>
+                            <li class="submenu-item"><a class="nav-link">Customer Retention: 92%</a></li>
+                            <li class="submenu-item"><a class="nav-link">Innovation Index: 8.7/10</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link has-submenu">
+                            <i data-lucide="candlestick-chart"></i>
+                            <div class="nav-title">
+                                <span class="nav-text">Performance Metrics</span>
+                                <i data-lucide="chevron-down" class="chevron"></i>
+                            </div>
+                        </a>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a class="nav-link">Sales Conversion: 34.2%</a></li>
+                            <li class="submenu-item"><a class="nav-link">Lead Response Time: 2.3h</a></li>
+                            <li class="submenu-item"><a class="nav-link">Customer Lifetime Value</a></li>
+                            <li class="submenu-item"><a class="nav-link">Churn Rate: 3.1%</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link has-submenu">
+                            <i data-lucide="trending-up-down"></i>
+                            <div class="nav-title">
+                                <span class="nav-text">Predictive Analysis</span>
+                                <i data-lucide="chevron-down" class="chevron"></i>
+                            </div>
+                        </a>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a class="nav-link">Q4 Revenue Forecast: $2,500,000</a></li>
+                            <li class="submenu-item"><a class="nav-link">Resource Demand: High</a></li>
+                            <li class="submenu-item"><a class="nav-link">Market Trends: Positive</a></li>
+                            <li class="submenu-item"><a class="nav-link">Risk Assessment: Low</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Tasks Panel -->
+            <div class="panel-content" id="tasks-panel">
+                <div class="sidebar-header">
+                    <h2 class="panel-title">Tasks</h2>
+                    <a class="nav-link collapse-btn" style="padding: 0.5rem;" title="Collapse">
+                        <i data-lucide="chevron-right"></i>
+                    </a>
+                </div>
+                <div class="search-box">
+                     <i data-lucide="search" class="search-icon"></i>
+                     <input type="text" placeholder="Search...">
+                </div>
+                <ul class="sidebar-nav">
+                    <span class="nav-sub-menu-header">Quick Actions</span>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <i data-lucide="plus"></i>
+                            <div class="nav-title">
+                                <span class="nav-text">New task</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <i data-lucide="funnel"></i>
+                            <div class="nav-title">
+                                <span class="nav-text">Filter tasks</span>
+                            </div>
+                        </a>
+                    </li>
+                    <span class="nav-sub-menu-header">My Tasks</span>
+                    <li class="nav-item">
+                        <a class="nav-link has-submenu">
+                            <i data-lucide="clock-4"></i>
+                            <div class="nav-title">
+                                <span class="nav-text">Due today</span>
+                                <i data-lucide="chevron-down" class="chevron"></i>
+                            </div>
+                        </a>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a class="nav-link">Review design mockops</a></li>
+                            <li class="submenu-item"><a class="nav-link">Update documentation</a></li>
+                            <li class="submenu-item"><a class="nav-link">Test new feature</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link has-submenu">
+                            <i data-lucide="clock-fading"></i>
+                            <div class="nav-title">
+                                <span class="nav-text">In progress</span>
+                                <i data-lucide="chevron-down" class="chevron"></i>
+                            </div>
+                        </a>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a class="nav-link">Implement user auth</a></li>
+                            <li class="submenu-item"><a class="nav-link">Database migration</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link has-submenu">
+                            <i data-lucide="circle-check"></i>
+                            <div class="nav-title">
+                                <span class="nav-text">Completed</span>
+                                <i data-lucide="chevron-down" class="chevron"></i>
+                            </div>
+                        </a>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a class="nav-link">Fixed login bug</a></li>
+                            <li class="submenu-item"><a class="nav-link">Updated dependencies</a></li>
+                            <li class="submenu-item"><a class="nav-link">Code review completed</a></li>
+                        </ul>
+                    </li>
+                    <span class="nav-sub-menu-header">Other</span>
+                    <li class="nav-item">
+                        <a class="nav-link has-submenu">
+                            <i data-lucide="flag"></i>
+                            <div class="nav-title">
+                                <span class="nav-text">Priority tasks</span>
+                                <i data-lucide="chevron-down" class="chevron"></i>
+                            </div>
+                        </a>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a class="nav-link">Meeting with client</a></li>
+                            <li class="submenu-item"><a class="nav-link">Schedule upcoming meetings</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <i data-lucide="layers"></i>
+                            <div class="nav-title">
+                                <span class="nav-text">Archived</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <h1>Sr. UI Developer Assignment</h1><br>
+        <div>
+            <h2>Please follow the following guidelines when building:</h2>
+            
+            1. Build and integrate the sidebar on a web page.<br>
+            2. The rest of the webpage can be empty.<br>
+            3. The look and feel of the sidebar has to be exactly the same as in the video. It needs to be pixel perfect. Including the transitions and animations.<br>
+            4. Also think about responsiveness of the sidebar.<br>
+            5. Text and icons can change. You can also reduce the number of items in the sidebar in the second column.<br>
+            6. You are free to use any icon library.<br>
+            7. Using any CSS, JS framework or library is not allowed. The code has to be written in vanilla css, html5 and pure javascript or typescript. Using any helper library is not allowed.<br><br><br>
+
+            <h2>Bonus:</h2>
+            Implement a dark/Light theme switcher and change colors of the sidebar accordingly.<br><br><br>
+            
+            <h2>Submission Guidelines:</h2>
+            1. Please upload the project to github.<br>
+            2. Please keep the project public to avoid any access related issues.<br>
+            3. Do Not upload a zip. Please upload the full code.<br>
+        </div>
+    </main>
+    <script src="./index.js"></script> 
+</body>
+</html>
+
